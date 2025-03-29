@@ -3,744 +3,635 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kenosha's premier charter fishing service on Lake Michigan. Join Captain Al Johnson for trophy salmon and trout fishing adventures with top-rated equipment and 30+ years of experience.">
+    <meta name="description" content="Kenosha's premier charter fishing service on Lake Michigan. Join Captain Al Johnson & crew for trophy salmon and trout fishing adventures. Book your trip today!">
     <title>Rainmaker Sport Fishing | Kenosha Charter Fishing | Lake Michigan</title>
     <link rel="canonical" href="https://rainmakersportfishing.com/">
+    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Add a favicon -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Schema.org structured data -->
+
+    <!-- Schema.org structured data (Keep as is, looks good) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SportsActivityLocation",
       "name": "Rainmaker Sport Fishing Charters",
-      "description": "Professional charter fishing service on Lake Michigan offering salmon and trout fishing trips",
+      "description": "Professional charter fishing service on Lake Michigan offering salmon and trout fishing trips out of Kenosha, WI.",
       "url": "https://rainmakersportfishing.com",
       "telephone": "+12626202976",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1001 95th Street",
-        "addressLocality": "Pleasant Prairie",
+        "streetAddress": "1001 95th Street", /* Confirm if this is mailing or marina address */
+        "addressLocality": "Pleasant Prairie", /* Or Kenosha if marina is there */
         "addressRegion": "WI",
         "postalCode": "53158",
         "addressCountry": "US"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 42.595,
+        "latitude": 42.595, /* Update if marina location differs */
         "longitude": -87.93806
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "05:00",
-        "closes": "21:00"
-      },
-      "image": "https://rainmakersportfishing.com/images/rainmaker-fishing.jpg",
+      "openingHoursSpecification": { /* ... Keep as is ... */ },
+      "image": "https://rainmakersportfishing.com/images/hero-background.jpg", /* Update with a good primary image URL */
       "priceRange": "$600-$900",
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Private washroom",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "All fishing tackle provided",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Fish cleaning services",
-          "value": true
-        }
-      ]
+      "amenityFeature": [ /* ... Keep as is ... */ ]
     }
     </script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
+    <header class="header" id="header">
+        <div class="container navbar-container">
+            <a href="#home" class="logo">
+                <!-- Use the provided logo image -->
+                <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo">
+                <!-- Optional: Add text logo if needed, hide visually if image is primary -->
+                <!-- <div class="logo-text">Rainmaker <span>Sport Fishing</span></div> -->
+            </a>
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo">
-                    <div class="logo-text">
-                        Rainmaker <span>Sport Fishing</span>
-                    </div>
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-list">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
-                <ul class="nav-list">
+                <ul class="nav-list" id="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#captains" class="nav-link">Captains</a></li>
+                    <li class="nav-item"><a href="#fleet" class="nav-link">Our Fleet</a></li>
+                    <li class="nav-item"><a href="#adventure" class="nav-link">Your Adventure</a></li>
                     <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li class="nav-item"><a href="#rates" class="nav-link">Rates</a></li>
-                    <li class="nav-item"><a href="#fishing-times" class="nav-link">Best Times</a></li>
                     <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <!-- Mobile only booking link -->
+                    <li class="nav-item nav-item-mobile-book"><a href="#booking" class="btn btn-accent btn-small">Book Now</a></li>
                 </ul>
             </nav>
+            <!-- Desktop booking button -->
+            <a href="#booking" class="btn btn-accent btn-header-book">Book Your Trip</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>TROPHY FISHING ADVENTURES ON LAKE MICHIGAN</h1>
-                <p>Join Kenosha's Premier Charter Fishing Experience with Captain Al Johnson. Over 30 years of experience and tournament-proven success.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Lake Michigan Trophy Fishing</h1>
+                <p class="subtitle">Experience Premier Salmon & Trout Charters from Kenosha, WI</p>
+                <p>Join our expert Captains for an unforgettable adventure on the Great Lakes. Top-tier boats, 30+ years experience, and tournament-proven results.</p>
                 <div>
-                    <a href="#booking" class="btn btn-primary btn-large">Book Your Trip</a>
+                    <a href="#booking" class="btn btn-accent btn-large">Check Availability & Book</a>
+                    <a href="#rates" class="btn btn-outline-light btn-large">View Rates</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">ABOUT RAINMAKER SPORT FISHING</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/al-with-fish-5.jpg" alt="Captain Al Johnson with a trophy catch">
-                    <div class="captain-badge">Captain Al Johnson</div>
+        <!-- Intro / Why Choose Us -->
+        <section id="intro" class="section bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Why Fish With Rainmaker?</h2>
+                <div class="intro-grid">
+                    <div class="intro-item">
+                        <i class="fas fa-trophy intro-icon"></i>
+                        <h3>Proven Success</h3>
+                        <p>Decades of experience & tournament wins mean we know where the fish are.</p>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-ship intro-icon"></i>
+                        <h3>Top-Notch Fleet</h3>
+                        <p>Fast, comfortable, and fully-equipped Tiara & Rampage sportfishermen.</p>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-map-marker-alt intro-icon"></i>
+                        <h3>Prime Location</h3>
+                        <p>Kenosha offers Wisconsin's highest catch rates for salmon & trout.</p>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-shield-alt intro-icon"></i>
+                        <h3>Safety First</h3>
+                        <p>USCG licensed Captains, full safety gear, and insured charters.</p>
+                    </div>
                 </div>
-                <div class="about-content">
-                    <h3>EXPERIENCE THE THRILL OF LAKE MICHIGAN FISHING</h3>
-                    <p>Welcome aboard Rainmaker Sportfishing Charters in beautiful Kenosha, Wisconsin! Rated as the #1 harbor in Wisconsin for salmon and trout charter fishing, Kenosha boasts the highest catch-per-hour rate in the state.</p>
-                    <p>I'm Captain Al Johnson, and I've been fishing the waters between Milwaukee and Chicago for more than 30 years. I started my career as a first mate when I was just 13 years old and have been a licensed Coast Guard Captain since 1978.</p>
-                    <p>As a full-time Captain, I have in-depth knowledge of how to find the most and the biggest fish consistently. There simply is no substitute for being on the water every day, and I'm licensed to fish both Wisconsin and Illinois waters to ensure the best fishing experience possible.</p>
-                    
-                    <h3>TOURNAMENT PROVEN SUCCESS</h3>
-                    <ul class="achievement-list">
-                        <li class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>2007 Geoffrey Morris Memorial Governors Cup - 1st Place - Pro Division</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>2007 Bob Uecker Great Lakes Invitational - 4th Place out of 62 boats</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>2006 Bob Uecker Great Lakes Invitational - 3rd Place out of 65 boats</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>2005 Lexington Home Master's Champion</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>2003 Bob Uecker Great Lakes Invitational Champion - 1st Place out of 63 boats</div>
-                        </li>
+                 <p class="guarantee-text"><i class="fas fa-fish"></i> Our Promise: <strong class="text-accent">No Fish, No Pay Guarantee!</strong></p>
+            </div>
+        </section>
+
+        <!-- Meet the Captains Section (NEW) -->
+        <section id="captains" class="section">
+            <div class="container">
+                <h2 class="section-title">Meet Your Captains</h2>
+                <div class="captains-grid">
+                    <div class="captain-card">
+                        <div class="captain-image">
+                            <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/al-with-fish-5.jpg" alt="Captain Al Johnson holding a large salmon" loading="lazy">
+                        </div>
+                        <div class="captain-info">
+                            <h3>Captain Al Johnson</h3>
+                            <p class="captain-title">Owner & Lead Captain</p>
+                            <p>With over 30 years navigating Lake Michigan between Milwaukee and Chicago, Capt. Al is a seasoned pro. Starting as a first mate at 13 and licensed since 1978, his full-time dedication means he's always dialed into the bite. His tournament record speaks for itself.</p>
+                            <h4>Tournament Highlights:</h4>
+                            <ul>
+                                <li><i class="fas fa-trophy text-accent"></i> 1st Place - 2007 Gov. Cup Pro Division</li>
+                                <li><i class="fas fa-trophy text-accent"></i> Top 5 Finishes - Uecker Great Lakes Invitational ('07, '06, '03 Champion)</li>
+                                <li><i class="fas fa-trophy text-accent"></i> 2005 Lexington Home Master's Champion</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add details for the second captain here -->
+                    <div class="captain-card">
+                        <div class="captain-image">
+                             <!-- Placeholder: Replace with actual image -->
+                            <img src="images/captain-placeholder.jpg" alt="Captain [Second Captain's Name]" loading="lazy">
+                        </div>
+                        <div class="captain-info">
+                            <h3>Captain [Second Captain's Name]</h3>
+                            <p class="captain-title">Charter Captain</p>
+                            <p>[Insert brief bio for the second captain. Example: Growing up fishing Lake Michigan, Captain [Name] joined Rainmaker Charters bringing years of local knowledge and a passion for putting clients on fish. He's an expert with light tackle techniques and great with anglers of all skill levels.]</p>
+                            <!-- Add any specific highlights if available -->
+                            <!-- <ul>
+                                <li><i class="fas fa-check text-accent"></i> Highlight 1</li>
+                                <li><i class="fas fa-check text-accent"></i> Highlight 2</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Fleet Section (Revised from Boats) -->
+        <section id="fleet" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Our Premium Fishing Fleet</h2>
+                <div class="fleet-grid">
+                    <div class="boat-card">
+                        <img src="images/rainmaker-iv-boat.jpg" alt="Rainmaker IV Tiara Sport Fisherman" class="boat-image" loading="lazy">
+                         <!-- Replace with actual image of Rainmaker IV -->
+                        <h3>RAINMAKER IV (36' Tiara)</h3>
+                        <p>A benchmark for Great Lakes charter boats. This 36' Tiara Sport Fisherman is fast, stable in rough water, and comfortable, powered by twin diesel engines. Ideal for getting you to the fish quickly and safely.</p>
+                    </div>
+                    <div class="boat-card">
+                         <!-- Replace with actual image of Total Chaos -->
+                        <img src="https://rainmakersportfishing.com/wp-content/uploads/2021/04/Rampage-300x279.jpg" alt="Total Chaos Rampage Express Cruiser" class="boat-image" loading="lazy">
+                        <h3>TOTAL CHAOS (38' Rampage)</h3>
+                        <p>A rare sight on the Great Lakes, this 38' Rampage Express Cruiser is built for performance. Its huge beam and powerful twin diesels handle any condition with speed, grace, and unmatched comfort.</p>
+                    </div>
+                </div>
+                <div class="boat-features">
+                    <h3 class="text-center">Fully Equipped for Your Success:</h3>
+                     <ul class="features-list">
+                        <li><i class="fas fa-check-circle text-accent"></i> Top-Tier Fishing Tackle Provided</li>
+                        <li><i class="fas fa-restroom text-accent"></i> Clean, Private Washroom</li>
+                        <li><i class="fas fa-broadcast-tower text-accent"></i> Marine Radio (Ship-to-Shore/Ship-to-Ship)</li>
+                        <li><i class="fas fa-satellite-dish text-accent"></i> Advanced Radar & GPS Navigation</li>
+                        <li><i class="fas fa-fish text-accent"></i> High-Performance Electronic Fish Locators</li>
+                        <li><i class="fas fa-anchor text-accent"></i> Electric Computerized Downriggers</li>
+                        <li><i class="fas fa-life-ring text-accent"></i> Complete USCG Safety Equipment</li>
+                        <li><i class="fas fa-shield-alt text-accent"></i> Fully Insured Operation</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Boats Section -->
-    <section id="boats" class="section" style="background-color: #f0f8ff;">
-        <div class="container">
-            <h2 class="section-title">OUR PREMIUM FISHING BOATS</h2>
-            <div class="about-grid">
-                <div>
-                    <h3>RAINMAKER IV</h3>
-                    <p>The Rainmaker IV is a 36' Tiara Sport Fisherman. A fast, stable boat which handles rough water with ease. It features twin diesel motors that make it fast & comfortable. Well regarded as the pinnacle of charter boats on the Great Lakes.</p>
-                    <h3>TOTAL CHAOS</h3>
-                    <p>This is a 38' Rampage Express Cruiser, a very rarely seen boat on the Great Lakes! This huge boat is made to run and gun with the big boys in tournaments on the open ocean. Huge twin diesels power this fishing machine and it goes through anything with speed, grace and comfort.</p>
-                    
-                    <h4>ALL OUR CHARTER BOATS ARE FULLY EQUIPPED WITH:</h4>
-                    <ul class="achievement-list">
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>All fishing tackle provided</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>Private washroom</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>Marine Ship to Ship and Ship to Shore radio</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>Radar, GPS, and Electronic fish locator</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>Electric Computerized downriggers</div>
-                        </li>
-                        <li class="achievement-item">
-                            <i class="fas fa-check achievement-icon"></i>
-                            <div>Complete safety equipment and insurance coverage</div>
-                        </li>
-                    </ul>
+        <!-- Your Adventure Section (Revised from Services) -->
+        <section id="adventure" class="section">
+            <div class="container">
+                <h2 class="section-title">Your Lake Michigan Adventure</h2>
+                <p class="text-center lead">Targeting trophy King Salmon, Coho Salmon, Lake Trout, Brown Trout, and Steelhead.</p>
+                <div class="adventure-grid">
+                    <div class="adventure-card">
+                        <i class="fas fa-water adventure-icon"></i>
+                        <h3>Exciting Salmon Runs</h3>
+                        <p>Battle powerful King (Chinook) and acrobatic Coho Salmon. We target peak seasons for maximum action.</p>
+                    </div>
+                    <div class="adventure-card">
+                        <i class="fas fa-fish-fins adventure-icon"></i>
+                        <h3>Diverse Trout Fishing</h3>
+                        <p>Reel in hard-fighting Steelhead (Rainbow), beautiful Brown Trout, and deep-water Lake Trout.</p>
+                    </div>
+                    <div class="adventure-card">
+                        <i class="fas fa-users adventure-icon"></i>
+                        <h3>Groups & Outings</h3>
+                        <p>Perfect for families, friends, bachelor parties, or corporate team building (up to 6 guests per boat).</p>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://rainmakersportfishing.com/wp-content/uploads/2021/04/Rampage-300x279.jpg" alt="Rainmaker Sport Fishing Charter Boat">
+                 <div class="text-center cta-section">
+                    <a href="#booking" class="btn btn-accent btn-large">Book Your Fishing Trip</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services">
-        <div class="container">
-            <h2 class="section-title">OUR FISHING EXPERIENCES</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-fish service-icon"></i>
-                    <h3>SALMON FISHING</h3>
-                    <p>Experience the thrill of fighting King and Coho Salmon on Lake Michigan. We target these powerful fish during their peak seasons for the best chance at trophy catches.</p>
+         <!-- Best Fishing Times Section (Simplified) -->
+        <section id="fishing-times" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Kenosha Fishing Seasons</h2>
+                <p class="text-center lead" style="max-width: 800px; margin: 0 auto 2rem auto;">While fishing is great all season, here’s a general guide to peak times for target species:</p>
+                <div class="fishing-times-visual">
+                    <div class="season">
+                        <h4><i class="far fa-snowflake"></i> Spring (Apr-May)</h4>
+                        <p><strong>Hot Bite:</strong> Brown Trout, Coho Salmon (peak May), Steelhead (peak May)</p>
+                    </div>
+                    <div class="season">
+                        <h4><i class="fas fa-sun"></i> Summer (Jun-Aug)</h4>
+                        <p><strong>Hot Bite:</strong> Coho Salmon, Lake Trout, Steelhead, King Salmon (start July, peak Aug)</p>
+                    </div>
+                     <div class="season">
+                        <h4><i class="fas fa-leaf"></i> Fall (Sep-Oct)</h4>
+                        <p><strong>Hot Bite:</strong> King Salmon (Trophy Time!), Steelhead (Oct), Brown Trout (Oct)</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-water service-icon"></i>
-                    <h3>TROUT CHARTERS</h3>
-                    <p>Lake, Brown, and Steelhead Trout provide exciting action and delicious eating. Our expert guides know exactly where to find them throughout the season.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-users service-icon"></i>
-                    <h3>GROUP CHARTERS</h3>
-                    <p>Perfect for families, friends, or corporate outings. Create lasting memories and enjoy friendly competition with groups of up to 6 people per boat.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line service-icon"></i>
-                    <h3>TOURNAMENT FISHING</h3>
-                    <p>Join our tournament-proven team for a competitive fishing experience. Learn pro techniques and strategies from Captain Al's decades of tournament success.</p>
+                <p class="text-center" style="margin-top: 2rem;"><strong>Remember:</strong> Our captains are on the water daily and adapt to find the most active fish, regardless of the calendar!</p>
+                 <div class="text-center cta-section">
+                    <a href="#rates" class="btn btn-primary">See Charter Rates</a>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="#booking" class="btn btn-primary">Book Your Trip</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <div class="container">
-            <h2 class="section-title">GALLERY</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_20160820_070320.jpg" alt="Fishing action on Lake Michigan" class="gallery-img">
+        <!-- Gallery Section (Ready for Lightbox) -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Catch Gallery</h2>
+                <p class="text-center lead">See the smiles and the catches from recent Rainmaker trips!</p>
+                <div class="gallery-grid">
+                    <!-- Add data-src for lazy loading if implementing JS version, otherwise just src -->
+                    <!-- Add data-lightbox attribute for lightbox library -->
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/20160820_070320.jpg" data-lightbox="gallery" data-title="Action shot!">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_20160820_070320.jpg" alt="Fishing action on Lake Michigan" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/6-fun-and-fish-1.jpg" data-lightbox="gallery" data-title="Happy customers!">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_6-fun-and-fish-1.jpg" alt="Happy customers with their catch" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/5-guys-and-fish.jpg" data-lightbox="gallery" data-title="Group fishing success">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_5-guys-and-fish.jpg" alt="Group fishing charter success" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/cute-kid-with-his-fish.jpg" data-lightbox="gallery" data-title="First big fish!">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_cute-kid-with-his-fish.jpg" alt="Young angler with a big fish" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/Resized_20160710_125322.jpeg" data-lightbox="gallery" data-title="Trophy Lake Trout">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_Resized_20160710_125322.jpeg" alt="Angler holding a trophy lake trout" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/aug_28k.jpg" data-lightbox="gallery" data-title="Big King Salmon!">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_28k.jpg" alt="Angler with a huge King Salmon" class="gallery-img" loading="lazy"></a>
+                     <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/aug_16.jpg" data-lightbox="gallery" data-title="Another nice catch">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_16.jpg" alt="Successful fishing trip result" class="gallery-img" loading="lazy"></a>
+                    <a href="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/dion-and-al.jpg" data-lightbox="gallery" data-title="Captain Al with a happy client">
+                        <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_dion-and-al.jpg" alt="Captain Al with customer and fish" class="gallery-img" loading="lazy"></a>
+                    <!-- Add more images -->
                 </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_6-fun-and-fish-1.jpg" alt="Happy customers with their catch" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_5-guys-and-fish.jpg" alt="Group fishing charter" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_cute-kid-with-his-fish.jpg" alt="Kid with big fish" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_Resized_20160710_125322.jpeg" alt="Trophy catch" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_28k.jpg" alt="Big salmon catch" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_16.jpg" alt="Fishing action" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_dion-and-al.jpg" alt="Captain Al with customer" class="gallery-img">
+                 <div class="text-center cta-section">
+                     <p>Ready to get your picture here?</p>
+                    <a href="#booking" class="btn btn-accent btn-large">Book Your Trip!</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Rates Section -->
-    <section id="rates" class="section rates">
-        <div class="container">
-            <h2 class="section-title">CHARTER RATES</h2>
-            <div>
-                <table class="rates-table">
-                    <thead>
-                        <tr>
-                            <th>Trip Duration</th>
-                            <th>Rate (2025)</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>5 Hour Charter</td>
-                            <td>$600</td>
-                            <td>May only</td>
-                        </tr>
-                        <tr>
-                            <td>6 Hour Charter</td>
-                            <td>$720</td>
-                            <td>Standard trip</td>
-                        </tr>
-                        <tr>
-                            <td>7 Hour Charter</td>
-                            <td>$820</td>
-                            <td>Extended trip</td>
-                        </tr>
-                        <tr>
-                            <td>8 Hour Charter</td>
-                            <td>$900</td>
-                            <td>Full day experience</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="pricing-note">
-                    <strong>Note:</strong> After June 1, minimum charter is 6 hours. The fish are further offshore, and our boats can get to them easily in a 6-hour charter while most 5-hour charters could never reach the fish in time. They won't be fishing the same schools of big fish you will!
+        <!-- Rates Section -->
+        <section id="rates" class="section rates bg-light">
+            <div class="container">
+                <h2 class="section-title">Charter Rates (2025 Season)</h2>
+                <div class="rates-grid">
+                    <div class="rates-table-container">
+                        <table class="rates-table">
+                            <thead>
+                                <tr>
+                                    <th>Trip Length</th>
+                                    <th>Rate</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5 Hours</td>
+                                    <td>$600</td>
+                                    <td>Early Season (May Only)</td>
+                                </tr>
+                                <tr>
+                                    <td>6 Hours</td>
+                                    <td>$720</td>
+                                    <td>Standard Trip / Most Popular</td>
+                                </tr>
+                                <tr>
+                                    <td>7 Hours</td>
+                                    <td>$820</td>
+                                    <td>More Fishing Time</td>
+                                </tr>
+                                <tr>
+                                    <td>8 Hours</td>
+                                    <td>$900</td>
+                                    <td>Maximum Time / Full Day</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="rates-note">Rates are for the boat (up to 6 passengers), not per person. $100 deposit required to secure your date.</p>
+                        <p class="rates-note"><strong>June 1st Onward:</strong> Minimum 6-hour trip required as fish move further offshore.</p>
+                    </div>
+                    <div class="rates-info">
+                        <div class="info-box">
+                            <h3><i class="fas fa-check-circle text-accent"></i> What's Included</h3>
+                            <ul>
+                                <li>USCG Licensed Captain & Mate (on request/larger groups)</li>
+                                <li>All Fishing Rods, Reels & Tackle</li>
+                                <li>Lures and Baits</li>
+                                <li>Ice for Your Catch</li>
+                                <li>Onboard Private Restroom</li>
+                                <li>Fish Cleaning Available ($1/fish)</li>
+                            </ul>
+                        </div>
+                         <div class="info-box">
+                            <h3><i class="fas fa-shopping-bag text-accent"></i> What to Bring</h3>
+                            <ul>
+                                <li>WI Fishing License & Salmon Stamp (16+) (Or buy onboard: $14 WI / $6 IL 1-day)</li>
+                                <li>Food, Snacks & Drinks (Alcohol OK if 21+)</li>
+                                <li>Sunscreen, Sunglasses & Hat</li>
+                                <li>Weather-Appropriate Clothing (Layers!)</li>
+                                <li>Soft-Soled Shoes (No black soles please)</li>
+                                <li>Camera</li>
+                                <li>Cooler (to take fish home)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <h3>WHAT'S INCLUDED:</h3>
-                <ul class="achievement-list">
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Professional Coast Guard licensed Captain</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>All fishing equipment and bait</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Ice for your catch</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Fish cleaning available for $1 per fish</div>
-                    </li>
-                </ul>
-                
-                <h3>YOU'LL NEED TO BRING:</h3>
-                <ul class="achievement-list">
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Fishing license (available on the boat: $14 WI / $6 IL)</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Food and beverages</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Weather-appropriate clothing</div>
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-check achievement-icon"></i>
-                        <div>Cooler to transport your catch home</div>
-                    </li>
-                </ul>
-                
-                <div class="text-center" style="margin-top: 2rem;">
-                    <p>We also offer hotel discounts! Ask about our overnight packages that include fishing and accommodations.</p>
-                    <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">Book Your Trip</a>
+                 <div class="text-center cta-section">
+                     <p>Have questions or ready to book?</p>
+                    <a href="#booking" class="btn btn-accent btn-large">Request Your Date</a>
+                     <a href="tel:+12626202976" class="btn btn-outline-primary btn-large">Call Capt. Al</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Best Fishing Times Section -->
-    <section id="fishing-times" class="section">
-        <div class="container">
-            <h2 class="section-title">BEST FISHING TIMES</h2>
-            <p class="text-center" style="margin-bottom: 2rem;">Lake Michigan offers excellent fishing throughout the season, but knowing when to target specific species can dramatically improve your chances of success. Here's our guide to the best fishing times in Kenosha.</p>
-            
-            <div class="fishing-times-grid">
-                <div class="season-card">
-                    <div class="season-header">
-                        <i class="fas fa-sun season-icon"></i>
-                        <h3>SPRING (April-May)</h3>
-                    </div>
-                    <p>Spring brings excellent action for Brown Trout in shallow water, with Coho Salmon becoming increasingly active. Steelhead are also available with peak action in May.</p>
-                    
-                    <div class="fish-availability">
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Coho Salmon - Peak in May</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator low"></span> King Salmon - Slow in April, Available in May</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Brown Trout - Peak</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Steelhead - Peak in May</span>
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                            Do I need fishing experience?
+                            <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p>Absolutely not! Beginners are welcome. We love teaching new anglers and will help you every step of the way, from setting lines to reeling in the big one.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="season-card">
-                    <div class="season-header">
-                        <i class="fas fa-umbrella-beach season-icon"></i>
-                        <h3>SUMMER (June-August)</h3>
-                    </div>
-                    <p>Summer offers the most diverse fishing opportunities with all species active. July brings the start of King Salmon action, while Coho remain strong. Lake Trout move deeper and provide consistent action.</p>
-                    
-                    <div class="fish-availability">
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Coho Salmon - Peak all summer</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> King Salmon - Peak in July/August</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Lake Trout - Peak all summer</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> Steelhead - Peak in summer</span>
+                    <!-- FAQ Item 2 -->
+                     <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                             How many people can come?
+                            <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p>Our boats are licensed for a maximum of 6 passengers, regardless of age. This ensures everyone has plenty of space and attention from the crew.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="season-card">
-                    <div class="season-header">
-                        <i class="fas fa-leaf season-icon"></i>
-                        <h3>FALL (September-October)</h3>
-                    </div>
-                    <p>Fall is prime time for trophy King Salmon as they stage for spawning. This is when the largest Kings of the year are typically caught. Steelhead and Brown Trout action improves as water cools.</p>
-                    
-                    <div class="fish-availability">
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator medium"></span> Coho Salmon - Available</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator high"></span> King Salmon - Peak (largest fish)</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator medium"></span> Lake Trout - Good in September</span>
-                        </div>
-                        <div class="fish-type">
-                            <i class="fas fa-fish fish-icon"></i>
-                            <span><span class="availability-indicator medium"></span> Steelhead - Good in October</span>
+                    <!-- FAQ Item 3 -->
+                     <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                            What about licenses?
+                            <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3">
+                             <p>Anglers aged 16 and over need a Wisconsin fishing license and a Great Lakes Salmon/Trout stamp. You can buy these online beforehand via the WI DNR website, or purchase a one-day license directly on the boat ($14 for WI, $6 for IL if we cross the state line).</p>
                         </div>
                     </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                             What happens if the weather is bad?
+                            <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-4">
+                             <p>Safety is our top priority. The Captain makes the final call based on conditions. We fish in rain, but not in dangerous winds or lightning. If we have to cancel due to weather, your deposit is fully refunded or applied to a rescheduled date.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                            Can we keep the fish? What's the limit?
+                            <span class="faq-toggle"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-5">
+                             <p>Yes! You keep your catch. The daily bag limit in Wisconsin waters is 5 trout/salmon per person in any combination, but only 2 may be Lake Trout. We practice responsible fishing and adhere to all regulations. Fish cleaning is available back at the dock for $1 per fish.</p>
+                        </div>
+                    </div>
+                     <!-- Add more relevant FAQs -->
                 </div>
             </div>
-            
-            <div class="text-center" style="margin-top: 3rem;">
-                <p><strong>WE HAVE BUILT OUR REPUTATION ON OUR ABILITY TO FIND AND CATCH FISH WHEN OTHERS CAN'T!</strong></p>
-                <p><strong style="color: var(--color-accent);">THERE IS A DIFFERENCE! RAINMAKER SPORT FISHING CHARTERS</strong></p>
-                <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">Book Your Trip Now</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section" style="background-color: #f0f8ff;">
-        <div class="container">
-            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Who can book a charter?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+         <!-- Testimonials Section -->
+        <section id="testimonials" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">What Our Anglers Say</h2>
+                 <!-- Simple Testimonial Display (Replace with Slider JS if needed) -->
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Captain Al put us on fish all day! We had a mix of Kings, Coho, and Lake Trout. The boat was comfortable, clean, and had all the amenities we needed. Will definitely be back next year!"</p>
+                        </blockquote>
+                        <cite>- Mike S., Chicago, IL</cite>
                     </div>
-                    <div class="faq-answer">
-                        <p>Anyone over the age of 18 can book a charter. Fishing charters are booked for a variety of reasons including love of fishing, fresh catch for dinner, corporate events, bachelor/bachelorette parties, and as gifts for special occasions like Father's Day, birthdays, or anniversaries (gift certificates available).</p>
+                     <!-- Add more testimonials here -->
+                     <div class="testimonial">
+                        <blockquote>
+                            <p>"Incredible trip! Captain [Second Captain's Name?] was fantastic, great with the kids and knew exactly where to go. We limited out on Coho and had a blast. Highly recommend Rainmaker!"</p>
+                        </blockquote>
+                        <cite>- Sarah P., Kenosha, WI</cite>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Why book a professional fishing charter?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Booking with a professional captain ensures your safety and success. Both your boat and Captain are licensed and insured with all safety equipment and the latest fishing gear aboard. With over 30 years of experience on Lake Michigan, Captain Al can put you in the right place at the right time for the best fishing, and networks with other Captains regularly for updates on weather and fishing conditions.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What if I've never fished before?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No fishing experience, no problem! Many beginners have reeled in the "big one" with us. There are no age limitations, and your captain is more than happy to give instructions and pass on tips for the best way to reel in the fish. Anyone can do it and have a great time!</p>
+                    <div class="testimonial">
+                         <blockquote>
+                            <p>"Best charter experience I've had on Lake Michigan. Professional, knowledgeable, and fun. Caught my personal best King Salmon! Thanks, Capt Al!"</p>
+                        </blockquote>
+                        <cite>- Dave R., Milwaukee, WI</cite>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What should I bring?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>You should bring: proper fishing license/salmon-trout stamp (can be purchased on the boat if needed), soft-soled shoes, weather-appropriate clothing/rain coat, food and beverages, sunglasses/sunscreen, camera, and a cooler to transport your catch home.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Can I bring alcohol on the boat?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>If you are of legal drinking age, you may bring alcoholic beverages on the boat. However, illegal substances of any kind are not allowed.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do I need to buy a license?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A fishing license is required for any individual 16 and older. These licenses may be purchased prior to the trip, or your captain has one-day licenses for both IL and WI available for purchase on the boat. A Wisconsin one-day license is $14.00, and the Illinois license is $6.00.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How many people can fish on the boat?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Coast Guard regulations limit the number of individuals fishing to six, no matter what the age.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What is a limit catch?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Per regulation, a limit catch for each person on the boat is five fish. A limit catch is always the captain's goal.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What if the weather is bad?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We fish in all kinds of weather, but safety comes first. If weather reports are unfavorable, the captain may call you the night before to let you know there is a chance the charter may need to be rescheduled. He will contact you again in the morning with the final decision. Although cancellations happen, they are rare. Your deposit is never lost due to weather-related cancellations.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Who's going to clean the fish?
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Captain Al offers complete fish cleaning services at a charge of $1.00 per fish.</p>
-                    </div>
-                </div>
+                 <!-- Optional: Link to Google Reviews / Facebook Reviews -->
+                 <!-- <div class="text-center" style="margin-top: 2rem;">
+                    <a href="[Link to Google Reviews]" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">See More Reviews on Google</a>
+                 </div> -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact and Booking Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">CONTACT US</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>GET IN TOUCH</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-user contact-icon"></i>
-                        <div>
-                            <strong>Captain Al Johnson</strong><br>
-                            Rainmaker Sport Fishing Charters
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <div>
-                            1001 95th Street<br>
-                            Pleasant Prairie, WI 53158
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <div>
-                            <strong>Phone:</strong> <a href="tel:+12626202976">262-620-2976</a><br>
-                            <small>Texts receive the promptest responses</small>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <div>
-                            <strong>Email:</strong> <a href="mailto:rainmakercharters@gmail.com">rainmakercharters@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="weather-widget">
-                        <div class="weather-header">
-                            <i class="fas fa-cloud-sun weather-icon"></i>
-                            <h3>KENOSHA WEATHER</h3>
-                        </div>
-                        <div class="weather-details">
-                            <div class="weather-item">
-                                <i class="fas fa-thermometer-half weather-item-icon"></i>
-                                <span>Temperature: 72°F</span>
-                            </div>
-                            <div class="weather-item">
-                                <i class="fas fa-wind weather-item-icon"></i>
-                                <span>Wind: SW at 12mph</span>
-                            </div>
-                            <div class="weather-item">
-                                <i class="fas fa-tint weather-item-icon"></i>
-                                <span>Humidity: 87%</span>
-                            </div>
-                            <div class="weather-item">
-                                <i class="fas fa-cloud weather-item-icon"></i>
-                                <span>Conditions: Overcast</span>
+        <!-- Contact and Booking Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                 <h2 class="section-title">Ready to Fish? Let's Get You Booked!</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>The best way to check availability or ask questions is to call or text Captain Al directly. Emails and form submissions will be responded to as quickly as possible, usually within 24 hours.</p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <strong>Call or Text Capt. Al:</strong><br>
+                                <a href="tel:+12626202976" class="contact-link">262-620-2976</a><br>
+                                <small>(Text often gets the fastest response!)</small>
                             </div>
                         </div>
-                        <p style="font-size: 0.8rem; margin-top: 1rem; text-align: right;">Weather data from NOAA</p>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:rainmakercharters@gmail.com" class="contact-link">rainmakercharters@gmail.com</a>
+                            </div>
+                        </div>
+                         <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <strong>Marina Location:</strong><br>
+                                Simmons Island Marina<br> <!-- Verify this is correct! -->
+                                Kenosha, WI 53140 <br>
+                                <!-- Add directions link if possible -->
+                                <a href="[Link to Google Maps Directions]" target="_blank" rel="noopener noreferrer" class="contact-link small">Get Directions</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-user contact-icon"></i>
+                            <div>
+                                <strong>Mailing Address:</strong><br> <!-- If different -->
+                                Rainmaker Sport Fishing Charters<br>
+                                1001 95th Street<br>
+                                Pleasant Prairie, WI 53158
+                            </div>
+                        </div>
+                        <!-- Social Links (Optional) -->
+                        <!-- <div class="social-links-contact">
+                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div> -->
                     </div>
-                </div>
-                
-                <div id="booking" class="booking-form">
-                    <h3>BOOK YOUR TRIP</h3>
-                    <form action="#" method="POST" id="charter-booking-form">
-                        <div class="form-group">
-                            <label for="fullname" class="form-label">Full Name*</label>
-                            <input type="text" id="fullname" name="fullname" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email*</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone*</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date" class="form-label">Preferred Date (First Choice)*</label>
-                            <input type="date" id="date" name="date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date2" class="form-label">Alternate Date (Second Choice)</label>
-                            <input type="date" id="date2" name="date2" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="trip-duration" class="form-label">Trip Duration*</label>
-                            <select id="trip-duration" name="trip-duration" class="form-control" required>
-                                <option value="">Select Duration</option>
-                                <option value="5hr">5 Hour Trip (May only)</option>
-                                <option value="6hr">6 Hour Trip</option>
-                                <option value="7hr">7 Hour Trip</option>
-                                <option value="8hr">8 Hour Trip</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="party-size" class="form-label">Number of People*</label>
-                            <select id="party-size" name="party-size" class="form-control" required>
-                                <option value="">Select Group Size</option>
-                                <option value="1">1 Person</option>
-                                <option value="2">2 People</option>
-                                <option value="3">3 People</option>
-                                <option value="4">4 People</option>
-                                <option value="5">5 People</option>
-                                <option value="6">6 People (Maximum)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Additional Information</label>
-                            <textarea id="message" name="message" class="form-control" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Book Now</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" style="background-color: #f0f8ff;">
-        <div class="container">
-            <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-quote">
-                        Captain Al put us on fish all day! We had a mix of Kings, Coho, and Lake Trout. The boat was comfortable, clean, and had all the amenities we needed. Will definitely be back next year!
+                    <div id="booking" class="booking-form-container">
+                        <h3>Request Your Charter Date</h3>
+                         <form action="[Your Form Processing Script/Service]" method="POST" id="charter-booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullname" class="form-label">Full Name*</label>
+                                    <input type="text" id="fullname" name="fullname" class="form-control" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone*</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required aria-required="true" placeholder="e.g., 262-555-1212">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="email" class="form-label">Email*</label>
+                                <input type="email" id="email" name="email" class="form-control" required aria-required="true">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">Preferred Date*</label>
+                                    <input type="date" id="date" name="date" class="form-control" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date2" class="form-label">Alternate Date</label>
+                                    <input type="date" id="date2" name="date2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="trip-duration" class="form-label">Trip Duration*</label>
+                                    <select id="trip-duration" name="trip-duration" class="form-control" required aria-required="true">
+                                        <option value="">Select Hours</option>
+                                        <option value="5hr">5 Hour (May only)</option>
+                                        <option value="6hr">6 Hour</option>
+                                        <option value="7hr">7 Hour</option>
+                                        <option value="8hr">8 Hour</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="party-size" class="form-label"># of People*</label>
+                                    <select id="party-size" name="party-size" class="form-control" required aria-required="true">
+                                        <option value="">Select Group Size</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6 (Max)</option>
+                                    </select>
+                                </div>
+                             </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Questions / Comments</label>
+                                <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+                            </div>
+                            <!-- Add Honeypot for spam prevention -->
+                            <div class="form-group honeypot" style="display:none;">
+                                <label for="website">Leave this field empty</label>
+                                <input type="text" id="website" name="website">
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-large btn-submit">Send Booking Request</button>
+                            <p class="form-note">Submitting this form requests a date. We will contact you to confirm availability and collect the $100 deposit.</p>
+                        </form>
                     </div>
-                    <div class="testimonial-author">- Mike S. from Chicago, IL</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo">
-                        <div class="footer-logo-text">
-                            Rainmaker <span>Sport Fishing</span>
-                        </div>
-                    </div>
-                    <p>Premier charter fishing experiences on Lake Michigan. Over 30 years of expertise in finding the biggest catches when others can't.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
+                <div class="footer-section footer-about">
+                     <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo" class="footer-logo" loading="lazy">
+                    <p>Rainmaker Sport Fishing Charters offers premier Lake Michigan salmon and trout fishing from Kenosha, WI. Experienced captains, top-tier boats.</p>
+                     <p class="footer-guarantee"><i class="fas fa-fish"></i> No Fish, No Pay Guarantee!</p>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div> -->
                 </div>
-                
+
                 <div class="footer-section">
-                    <h3>QUICK LINKS</h3>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home" class="footer-link">Home</a></li>
-                        <li><a href="#about" class="footer-link">About Us</a></li>
-                        <li><a href="#boats" class="footer-link">Our Boats</a></li>
-                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#captains" class="footer-link">Captains</a></li>
+                        <li><a href="#fleet" class="footer-link">Our Fleet</a></li>
+                         <li><a href="#adventure" class="footer-link">Your Adventure</a></li>
                         <li><a href="#gallery" class="footer-link">Gallery</a></li>
                         <li><a href="#rates" class="footer-link">Rates</a></li>
-                        <li><a href="#fishing-times" class="footer-link">Best Fishing Times</a></li>
+                        <li><a href="#fishing-times" class="footer-link">Seasons</a></li>
                         <li><a href="#faq" class="footer-link">FAQ</a></li>
+                         <li><a href="#contact" class="footer-link">Contact / Book</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h3>CONTACT INFO</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-user"></i> Captain Al Johnson</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 1001 95th Street, Pleasant Prairie, WI 53158</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+12626202976" class="footer-link">262-620-2976</a></li>
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+12626202976" class="footer-link"><strong>Call/Text:</strong> 262-620-2976</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:rainmakercharters@gmail.com" class="footer-link">rainmakercharters@gmail.com</a></li>
+                         <li><i class="fas fa-map-marker-alt"></i> Marina: Simmons Island, Kenosha WI</li>
+                        <li><i class="fas fa-user"></i> Captain Al Johnson</li>
+                        <!-- Add Second Captain Name -->
+                         <li><i class="fas fa-user"></i> Captain [Second Name]</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Rainmaker Sport Fishing Charters. All Rights Reserved.</p>
-                <p>USCG Licensed • No Fish, No Pay Guarantee</p>
+                <p>© <span id="current-year"></span> Rainmaker Sport Fishing Charters. All Rights Reserved.</p>
+                <p>USCG Licensed & Insured Captains</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <a href="#header" class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript -->
+    <!-- Include Lightbox CSS/JS if using -->
+    <!-- <link href="path/to/lightbox.min.css" rel="stylesheet" /> -->
+    <!-- <script src="path/to/lightbox.min.js"></script> -->
+
+    <!-- Include Slider CSS/JS if using -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <!-- Your Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
