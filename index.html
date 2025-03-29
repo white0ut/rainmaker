@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenosha's premier charter fishing service on Lake Michigan. Join Captain Al Johnson for trophy salmon and trout fishing adventures with top-rated equipment and 30+ years of experience.">
+    <title>Rainmaker Sport Fishing | Kenosha Charter Fishing | Lake Michigan</title>
+    <link rel="canonical" href="https://rainmakersportfishing.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Rainmaker Sport Fishing Charters",
+      "description": "Professional charter fishing service on Lake Michigan offering salmon and trout fishing trips",
+      "url": "https://rainmakersportfishing.com",
+      "telephone": "+12626202976",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1001 95th Street",
+        "addressLocality": "Pleasant Prairie",
+        "addressRegion": "WI",
+        "postalCode": "53158",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.595,
+        "longitude": -87.93806
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "05:00",
+        "closes": "21:00"
+      },
+      "image": "https://rainmakersportfishing.com/images/rainmaker-fishing.jpg",
+      "priceRange": "$600-$900",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Private washroom",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "All fishing tackle provided",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fish cleaning services",
+          "value": true
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Custom Properties */
+        :root {
+            --color-primary: #003b6f;
+            --color-secondary: #0077cc;
+            --color-accent: #ff7700;
+            --color-light: #f5f7fa;
+            --color-dark: #1a1a1a;
+            --color-success: #28a745;
+            --font-heading: 'Bebas Neue', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+            --border-radius: 4px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Base Styles */
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--color-accent);
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            min-width: 180px;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--color-accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background-color: var(--color-accent);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e06600;
+        }
+        
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--color-accent);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            background-color: var(--color-primary);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 1rem;
+        }
+        
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            line-height: 1;
+            color: white;
+        }
+        
+        .logo-text span {
+            display: block;
+            font-size: 1rem;
+            color: var(--color-accent);
+        }
+        
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .nav-list {
+            display: flex;
+        }
+        
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-link {
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/20150824_063113.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .captain-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transform: rotate(-5deg);
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: var(--shadow);
+        }
+        
+        .achievement-list {
+            margin-top: 1.5rem;
+        }
+        
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-icon {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f0f8ff;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            height: 0;
+            padding-bottom: 75%;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        /* Rates Section */
+        .rates {
+            background-color: #f0f8ff;
+        }
+        
+        .rates-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .rates-table th, .rates-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .rates-table th {
+            background-color: var(--color-primary);
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        
+        .rates-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-note {
+            background-color: rgba(255, 119, 0, 0.1);
+            padding: 1rem;
+            border-left: 4px solid var(--color-accent);
+            margin-bottom: 2rem;
+        }
+        
+        /* Best Fishing Times Section */
+        .fishing-times-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .season-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+        }
+        
+        .season-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .season-icon {
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-right: 1rem;
+        }
+        
+        .fish-availability {
+            margin-top: 1.5rem;
+        }
+        
+        .fish-type {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .fish-icon {
+            color: var(--color-secondary);
+            margin-right: 0.5rem;
+        }
+        
+        .availability-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .high {
+            background-color: #28a745;
+        }
+        
+        .medium {
+            background-color: #ffc107;
+        }
+        
+        .low {
+            background-color: #dc3545;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            background-color: #f5f7fa;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: #e6f0ff;
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.25rem;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+        }
+        
+        /* Contact and Booking Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+        
+        .booking-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+        }
+        
+        /* Weather Widget */
+        .weather-widget {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .weather-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .weather-icon {
+            font-size: 2rem;
+            color: var(--color-secondary);
+            margin-right: 1rem;
+        }
+        
+        .weather-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .weather-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .weather-item-icon {
+            color: var(--color-accent);
+            margin-right: 0.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+        
+        .testimonial-quote::before,
+        .testimonial-quote::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--color-accent);
+            line-height: 0;
+            position: absolute;
+        }
+        
+        .testimonial-quote::before {
+            top: 0.5rem;
+            left: 0;
+        }
+        
+        .testimonial-quote::after {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: inline-block;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-link {
+            color: #b3c9de;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--color-accent);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-logo-text {
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+        }
+        
+        .footer-logo-text span {
+            color: var(--color-accent);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--color-accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            z-index: 99;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 84px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-primary);
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-list.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            html {
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .section {
+                padding: 2.5rem 0;
+            }
+            
+            .btn {
+                min-width: 150px;
+                padding: 0.6rem 1.2rem;
+            }
+            
+            .btn-large {
+                padding: 0.8rem 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .logo-text {
+                font-size: 1.25rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo">
+                    <div class="logo-text">
+                        Rainmaker <span>Sport Fishing</span>
+                    </div>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#rates" class="nav-link">Rates</a></li>
+                    <li class="nav-item"><a href="#fishing-times" class="nav-link">Best Times</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>TROPHY FISHING ADVENTURES ON LAKE MICHIGAN</h1>
+                <p>Join Kenosha's Premier Charter Fishing Experience with Captain Al Johnson. Over 30 years of experience and tournament-proven success.</p>
+                <div>
+                    <a href="#booking" class="btn btn-primary btn-large">Book Your Charter</a>
+                    <a href="#contact" class="btn btn-large">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">ABOUT RAINMAKER SPORT FISHING</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/al-with-fish-5.jpg" alt="Captain Al Johnson with a trophy catch">
+                    <div class="captain-badge">Captain Al Johnson</div>
+                </div>
+                <div class="about-content">
+                    <h3>EXPERIENCE THE THRILL OF LAKE MICHIGAN FISHING</h3>
+                    <p>Welcome aboard Rainmaker Sportfishing Charters in beautiful Kenosha, Wisconsin! Rated as the #1 harbor in Wisconsin for salmon and trout charter fishing, Kenosha boasts the highest catch-per-hour rate in the state.</p>
+                    <p>I'm Captain Al Johnson, and I've been fishing the waters between Milwaukee and Chicago for more than 30 years. I started my career as a first mate when I was just 13 years old and have been a licensed Coast Guard Captain since 1978.</p>
+                    <p>As a full-time Captain, I have in-depth knowledge of how to find the most and the biggest fish consistently. There simply is no substitute for being on the water every day, and I'm licensed to fish both Wisconsin and Illinois waters to ensure the best fishing experience possible.</p>
+                    
+                    <h3>TOURNAMENT PROVEN SUCCESS</h3>
+                    <ul class="achievement-list">
+                        <li class="achievement-item">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                            <div>2007 Geoffrey Morris Memorial Governors Cup - 1st Place - Pro Division</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                            <div>2007 Bob Uecker Great Lakes Invitational - 4th Place out of 62 boats</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                            <div>2006 Bob Uecker Great Lakes Invitational - 3rd Place out of 65 boats</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                            <div>2005 Lexington Home Master's Champion</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-trophy achievement-icon"></i>
+                            <div>2003 Bob Uecker Great Lakes Invitational Champion - 1st Place out of 63 boats</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Boats Section -->
+    <section id="boats" class="section" style="background-color: #f0f8ff;">
+        <div class="container">
+            <h2 class="section-title">OUR PREMIUM FISHING BOATS</h2>
+            <div class="about-grid">
+                <div>
+                    <h3>RAINMAKER IV</h3>
+                    <p>The Rainmaker IV is a 36' Tiara Sport Fisherman. A fast, stable boat which handles rough water with ease. It features twin diesel motors that make it fast & comfortable. Well regarded as the pinnacle of charter boats on the Great Lakes.</p>
+                    <h3>TOTAL CHAOS</h3>
+                    <p>This is a 38' Rampage Express Cruiser, a very rarely seen boat on the Great Lakes! This huge boat is made to run and gun with the big boys in tournaments on the open ocean. Huge twin diesels power this fishing machine and it goes through anything with speed, grace and comfort.</p>
+                    
+                    <h4>ALL OUR CHARTER BOATS ARE FULLY EQUIPPED WITH:</h4>
+                    <ul class="achievement-list">
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>All fishing tackle provided</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>Private washroom</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>Marine Ship to Ship and Ship to Shore radio</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>Radar, GPS, and Electronic fish locator</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>Electric Computerized downriggers</div>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check achievement-icon"></i>
+                            <div>Complete safety equipment and insurance coverage</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://rainmakersportfishing.com/wp-content/uploads/2021/04/Rampage-300x279.jpg" alt="Rainmaker Sport Fishing Charter Boat">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">OUR FISHING EXPERIENCES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-fish service-icon"></i>
+                    <h3>SALMON FISHING</h3>
+                    <p>Experience the thrill of fighting King and Coho Salmon on Lake Michigan. We target these powerful fish during their peak seasons for the best chance at trophy catches.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-water service-icon"></i>
+                    <h3>TROUT CHARTERS</h3>
+                    <p>Lake, Brown, and Steelhead Trout provide exciting action and delicious eating. Our expert guides know exactly where to find them throughout the season.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users service-icon"></i>
+                    <h3>GROUP CHARTERS</h3>
+                    <p>Perfect for families, friends, or corporate outings. Create lasting memories and enjoy friendly competition with groups of up to 6 people per boat.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>TOURNAMENT FISHING</h3>
+                    <p>Join our tournament-proven team for a competitive fishing experience. Learn pro techniques and strategies from Captain Al's decades of tournament success.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#booking" class="btn btn-primary">Book Your Charter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">GALLERY</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_20160820_070320.jpg" alt="Fishing action on Lake Michigan" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_6-fun-and-fish-1.jpg" alt="Happy customers with their catch" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_5-guys-and-fish.jpg" alt="Group fishing charter" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_cute-kid-with-his-fish.jpg" alt="Kid with big fish" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_Resized_20160710_125322.jpeg" alt="Trophy catch" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_28k.jpg" alt="Big salmon catch" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_aug_16.jpg" alt="Fishing action" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://rainmakersportfishing.com/wp-content/gallery/photo-gallery/thumbs/thumbs_dion-and-al.jpg" alt="Captain Al with customer" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rates Section -->
+    <section id="rates" class="section rates">
+        <div class="container">
+            <h2 class="section-title">CHARTER RATES</h2>
+            <div>
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>Trip Duration</th>
+                            <th>Rate (2025)</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5 Hour Charter</td>
+                            <td>$600</td>
+                            <td>May only</td>
+                        </tr>
+                        <tr>
+                            <td>6 Hour Charter</td>
+                            <td>$720</td>
+                            <td>Standard trip</td>
+                        </tr>
+                        <tr>
+                            <td>7 Hour Charter</td>
+                            <td>$820</td>
+                            <td>Extended trip</td>
+                        </tr>
+                        <tr>
+                            <td>8 Hour Charter</td>
+                            <td>$900</td>
+                            <td>Full day experience</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pricing-note">
+                    <strong>Note:</strong> After June 1, minimum charter is 6 hours. The fish are further offshore, and our boats can get to them easily in a 6-hour charter while most 5-hour charters could never reach the fish in time. They won't be fishing the same schools of big fish you will!
+                </div>
+                
+                <h3>WHAT'S INCLUDED:</h3>
+                <ul class="achievement-list">
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Professional Coast Guard licensed Captain</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>All fishing equipment and bait</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Ice for your catch</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Fish cleaning available for $1 per fish</div>
+                    </li>
+                </ul>
+                
+                <h3>YOU'LL NEED TO BRING:</h3>
+                <ul class="achievement-list">
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Fishing license (available on the boat: $14 WI / $6 IL)</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Food and beverages</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Weather-appropriate clothing</div>
+                    </li>
+                    <li class="achievement-item">
+                        <i class="fas fa-check achievement-icon"></i>
+                        <div>Cooler to transport your catch home</div>
+                    </li>
+                </ul>
+                
+                <div class="text-center" style="margin-top: 2rem;">
+                    <p>We also offer hotel discounts! Ask about our overnight packages that include fishing and accommodations.</p>
+                    <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">Book Your Charter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Fishing Times Section -->
+    <section id="fishing-times" class="section">
+        <div class="container">
+            <h2 class="section-title">BEST FISHING TIMES</h2>
+            <p class="text-center" style="margin-bottom: 2rem;">Lake Michigan offers excellent fishing throughout the season, but knowing when to target specific species can dramatically improve your chances of success. Here's our guide to the best fishing times in Kenosha.</p>
+            
+            <div class="fishing-times-grid">
+                <div class="season-card">
+                    <div class="season-header">
+                        <i class="fas fa-sun season-icon"></i>
+                        <h3>SPRING (April-May)</h3>
+                    </div>
+                    <p>Spring brings excellent action for Brown Trout in shallow water, with Coho Salmon becoming increasingly active. Steelhead are also available with peak action in May.</p>
+                    
+                    <div class="fish-availability">
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Coho Salmon - Peak in May</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator low"></span> King Salmon - Slow in April, Available in May</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Brown Trout - Peak</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Steelhead - Peak in May</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="season-card">
+                    <div class="season-header">
+                        <i class="fas fa-umbrella-beach season-icon"></i>
+                        <h3>SUMMER (June-August)</h3>
+                    </div>
+                    <p>Summer offers the most diverse fishing opportunities with all species active. July brings the start of King Salmon action, while Coho remain strong. Lake Trout move deeper and provide consistent action.</p>
+                    
+                    <div class="fish-availability">
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Coho Salmon - Peak all summer</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> King Salmon - Peak in July/August</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Lake Trout - Peak all summer</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> Steelhead - Peak in summer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="season-card">
+                    <div class="season-header">
+                        <i class="fas fa-leaf season-icon"></i>
+                        <h3>FALL (September-October)</h3>
+                    </div>
+                    <p>Fall is prime time for trophy King Salmon as they stage for spawning. This is when the largest Kings of the year are typically caught. Steelhead and Brown Trout action improves as water cools.</p>
+                    
+                    <div class="fish-availability">
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator medium"></span> Coho Salmon - Available</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator high"></span> King Salmon - Peak (largest fish)</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator medium"></span> Lake Trout - Good in September</span>
+                        </div>
+                        <div class="fish-type">
+                            <i class="fas fa-fish fish-icon"></i>
+                            <span><span class="availability-indicator medium"></span> Steelhead - Good in October</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <p><strong>WE HAVE BUILT OUR REPUTATION ON OUR ABILITY TO FIND AND CATCH FISH WHEN OTHERS CAN'T!</strong></p>
+                <p><strong style="color: var(--color-accent);">THERE IS A DIFFERENCE! RAINMAKER SPORT FISHING CHARTERS</strong></p>
+                <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">Book Your Charter Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section" style="background-color: #f0f8ff;">
+        <div class="container">
+            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Who can book a charter?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anyone over the age of 18 can book a charter. Fishing charters are booked for a variety of reasons including love of fishing, fresh catch for dinner, corporate events, bachelor/bachelorette parties, and as gifts for special occasions like Father's Day, birthdays, or anniversaries (gift certificates available).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why book a professional fishing charter?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Booking with a professional captain ensures your safety and success. Both your boat and Captain are licensed and insured with all safety equipment and the latest fishing gear aboard. With over 30 years of experience on Lake Michigan, Captain Al can put you in the right place at the right time for the best fishing, and networks with other Captains regularly for updates on weather and fishing conditions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I've never fished before?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No fishing experience, no problem! Many beginners have reeled in the "big one" with us. There are no age limitations, and your captain is more than happy to give instructions and pass on tips for the best way to reel in the fish. Anyone can do it and have a great time!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What should I bring?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You should bring: proper fishing license/salmon-trout stamp (can be purchased on the boat if needed), soft-soled shoes, weather-appropriate clothing/rain coat, food and beverages, sunglasses/sunscreen, camera, and a cooler to transport your catch home.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I bring alcohol on the boat?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you are of legal drinking age, you may bring alcoholic beverages on the boat. However, illegal substances of any kind are not allowed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to buy a license?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A fishing license is required for any individual 16 and older. These licenses may be purchased prior to the trip, or your captain has one-day licenses for both IL and WI available for purchase on the boat. A Wisconsin one-day license is $14.00, and the Illinois license is $6.00.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How many people can fish on the boat?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Coast Guard regulations limit the number of individuals fishing to six, no matter what the age.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is a limit catch?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Per regulation, a limit catch for each person on the boat is five fish. A limit catch is always the captain's goal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if the weather is bad?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We fish in all kinds of weather, but safety comes first. If weather reports are unfavorable, the captain may call you the night before to let you know there is a chance the charter may need to be rescheduled. He will contact you again in the morning with the final decision. Although cancellations happen, they are rare. Your deposit is never lost due to weather-related cancellations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Who's going to clean the fish?
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Captain Al offers complete fish cleaning services at a charge of $1.00 per fish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact and Booking Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>GET IN TOUCH</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-user contact-icon"></i>
+                        <div>
+                            <strong>Captain Al Johnson</strong><br>
+                            Rainmaker Sport Fishing Charters
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            1001 95th Street<br>
+                            Pleasant Prairie, WI 53158
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <strong>Phone:</strong> <a href="tel:+12626202976">262-620-2976</a><br>
+                            <small>Texts receive the promptest responses</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <strong>Email:</strong> <a href="mailto:rainmakercharters@gmail.com">rainmakercharters@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-widget">
+                        <div class="weather-header">
+                            <i class="fas fa-cloud-sun weather-icon"></i>
+                            <h3>KENOSHA WEATHER</h3>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-item">
+                                <i class="fas fa-thermometer-half weather-item-icon"></i>
+                                <span>Temperature: 72°F</span>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-wind weather-item-icon"></i>
+                                <span>Wind: SW at 12mph</span>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-tint weather-item-icon"></i>
+                                <span>Humidity: 87%</span>
+                            </div>
+                            <div class="weather-item">
+                                <i class="fas fa-cloud weather-item-icon"></i>
+                                <span>Conditions: Overcast</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.8rem; margin-top: 1rem; text-align: right;">Weather data from NOAA</p>
+                    </div>
+                </div>
+                
+                <div id="booking" class="booking-form">
+                    <h3>BOOK YOUR CHARTER</h3>
+                    <form action="#" method="POST" id="charter-booking-form">
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Full Name*</label>
+                            <input type="text" id="fullname" name="fullname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone*</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="form-label">Preferred Date (First Choice)*</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date2" class="form-label">Alternate Date (Second Choice)</label>
+                            <input type="date" id="date2" name="date2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="trip-duration" class="form-label">Trip Duration*</label>
+                            <select id="trip-duration" name="trip-duration" class="form-control" required>
+                                <option value="">Select Duration</option>
+                                <option value="5hr">5 Hour Trip (May only)</option>
+                                <option value="6hr">6 Hour Trip</option>
+                                <option value="7hr">7 Hour Trip</option>
+                                <option value="8hr">8 Hour Trip</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="party-size" class="form-label">Number of People*</label>
+                            <select id="party-size" name="party-size" class="form-control" required>
+                                <option value="">Select Group Size</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People (Maximum)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Additional Information</label>
+                            <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: #f0f8ff;">
+        <div class="container">
+            <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        Captain Al put us on fish all day! We had a mix of Kings, Coho, and Lake Trout. The boat was comfortable, clean, and had all the amenities we needed. Will definitely be back next year!
+                    </div>
+                    <div class="testimonial-author">- Mike S. from Chicago, IL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-cropped.png" alt="Rainmaker Sport Fishing Logo">
+                        <div class="footer-logo-text">
+                            Rainmaker <span>Sport Fishing</span>
+                        </div>
+                    </div>
+                    <p>Premier charter fishing experiences on Lake Michigan. Over 30 years of expertise in finding the biggest catches when others can't.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#boats" class="footer-link">Our Boats</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#gallery" class="footer-link">Gallery</a></li>
+                        <li><a href="#rates" class="footer-link">Rates</a></li>
+                        <li><a href="#fishing-times" class="footer-link">Best Fishing Times</a></li>
+                        <li><a href="#faq" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>CONTACT INFO</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user"></i> Captain Al Johnson</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 1001 95th Street, Pleasant Prairie, WI 53158</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+12626202976" class="footer-link">262-620-2976</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:rainmakercharters@gmail.com" class="footer-link">rainmakercharters@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rainmaker Sport Fishing Charters. All Rights Reserved.</p>
+                <p>USCG Licensed • No Fish, No Pay Guarantee</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        
+        navToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-toggle i').className = 'fas fa-plus';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                
+                // Toggle icon
+                const icon = question.querySelector('.faq-toggle i');
+                if (item.classList.contains('active')) {
+                    icon.className = 'fas fa-minus';
+                } else {
+                    icon.className = 'fas fa-plus';
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form validation
+        const bookingForm = document.getElementById('charter-booking-form');
+        
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Basic form validation
+                const fullname = document.getElementById('fullname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const date = document.getElementById('date').value;
+                const tripDuration = document.getElementById('trip-duration').value;
+                const partySize = document.getElementById('party-size').value;
+                
+                if (!fullname || !email || !phone || !date || !tripDuration || !partySize) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // If all validation passes
+                alert('Thank you for your booking request! We will contact you shortly to confirm your charter.');
+                bookingForm.reset();
+            });
+        }
+        
+        // Initialize the current date for the booking form
+        const dateInputs = document.querySelectorAll('input[type="date"]');
+        if (dateInputs.length > 0) {
+            const today = new Date();
+            const minDate = today.toISOString().split('T')[0];
+            
+            dateInputs.forEach(input => {
+                input.min = minDate;
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Image lazy loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = [].slice.call(document.querySelectorAll('img'));
+            
+            if ('IntersectionObserver' in window) {
+                const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
