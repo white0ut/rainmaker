@@ -134,7 +134,7 @@ ul { list-style-type: none; }
 .navbar { display: flex; align-items: center; }
 .nav-toggle { display: none; font-size: 1.8rem; color: var(--color-white); background: none; border: none; cursor: pointer; z-index: 1001; }
 .nav-list { display: flex; align-items: center; }
-.nav-item { margin-left: 1.5rem; }
+.nav-item { margin-left: 2rem; }
 .nav-link { color: var(--color-white); font-weight: 600; text-transform: uppercase; padding: 0.5rem; font-size: 0.9rem; position: relative; }
 .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: var(--color-accent); transition: width 0.3s ease; }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
