@@ -238,17 +238,69 @@ ul { list-style-type: none; }
 .guarantee-text i { margin-right: 0.5rem; color: var(--color-accent); }
 
 /* Captains Section */
-.captains-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; align-items: start; }
-.captain-card { display: flex; flex-direction: column; background-color: var(--color-light); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
-.captain-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-.captain-image img { width: 100%; height: 350px; object-fit: cover; border-radius: 0; }
-.captain-info { padding: 2rem; }
-.captain-info h3 { margin-bottom: 0.25rem; }
-.captain-title { font-weight: 600; color: var(--color-accent); margin-bottom: 1rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-.captain-info h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; }
-.captain-info ul { padding-left: 0.5rem; }
-.captain-info li { margin-bottom: 0.5rem; display: flex; align-items: center; }
-.captain-info li i { margin-right: 0.75rem; font-size: 1rem; width: 15px; text-align: center;}
+.captains-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minmax if needed for 3 cards */
+    gap: 3rem; 
+    align-items: start; 
+}
+.captain-card { 
+    display: flex; 
+    flex-direction: column; 
+    background-color: var(--color-light); 
+    border-radius: var(--border-radius); 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+    transition: var(--transition); 
+}
+.captain-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-lg); 
+}
+.captain-image img { 
+    width: 100%; 
+    height: 350px; /* Adjust height if needed */ 
+    object-fit: cover; 
+    border-radius: 0; 
+}
+.captain-info { 
+    padding: 2rem; 
+}
+.captain-info h3 { 
+    margin-bottom: 0.25rem; 
+}
+.captain-title { 
+    font-weight: 600; 
+    color: var(--color-accent); 
+    margin-bottom: 1rem; 
+    font-size: 1rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+.captain-info h4 { 
+    margin-top: 1.5rem; 
+    margin-bottom: 0.5rem; 
+    font-size: 1.1rem; 
+}
+.captain-info ul { 
+    padding-left: 0.5rem; 
+}
+.captain-info li { 
+    margin-bottom: 0.5rem; 
+    display: flex; 
+    align-items: center; 
+}
+.captain-info li i { 
+    margin-right: 0.75rem; 
+    font-size: 1rem; 
+    width: 15px; 
+    text-align: center;
+}
+
+/* Utility class used within the captain cards */
+.text-accent { 
+    color: var(--color-accent); 
+}
 
 /* Fleet Section */
 .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
