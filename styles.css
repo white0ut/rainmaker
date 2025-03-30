@@ -134,6 +134,7 @@ ul { list-style-type: none; }
     gap: 1rem;
     position: relative;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -151,55 +152,16 @@ ul { list-style-type: none; }
 .mobile-only {
     display: none;
 }
+
+.header .nav-toggle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 40em) {
     .mobile-only {
         display: block;
     }
-}
-
-/* Navigation styles for responsive-nav */
-.nav-collapse ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.nav-collapse li {
-    display: flex;
-    align-items: center;
-}
-
-.nav-collapse a {
-    color: var(--color-white);
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    font-size: 0.85rem;
-    position: relative;
-    display: block;
-}
-
-.nav-collapse a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0.5rem;
-    right: 0.5rem;
-    height: 2px;
-    background-color: var(--color-accent);
-    transition: transform 0.3s ease;
-    transform: scaleX(0);
-    transform-origin: center;
-}
-
-.nav-collapse a:hover::after,
-.nav-collapse a.active::after {
-    transform: scaleX(1);
-}
-
-.nav-collapse a:hover {
-    color: var(--color-white);
 }
 
 .btn-header-book {
