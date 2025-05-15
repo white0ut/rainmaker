@@ -23,13 +23,13 @@ jobs:
         cp styles.css deploy/
         cp -r images/ deploy/
       
-    - name: Deploy to server
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy via SFTP
+      uses: pressidium/lftp-mirror-action@v1
       with:
-        server: ${{ secrets.SFTP_HOST }}
-        username: ${{ secrets.SFTP_USERNAME }}
-        password: ${{ secrets.SFTP_PASSWORD }}
-        protocol: sftp
+        host: ${{ secrets.SFTP_HOST }}
         port: ${{ secrets.SFTP_PORT }}
-        local-dir: './deploy/'
-        server-dir: '/home/rainmaker/webapps/rainmaker/'
+        user: ${{ secrets.SFTP_USERNAME }}
+        pass: ${{ secrets.SFTP_PASSWORD }}
+        remoteDir: '/home/rainmaker/webapps/rainmaker/'
+        localDir: './deploy'
+        options: '--verbose --only-newer'
