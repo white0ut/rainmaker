@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     const faqItems = document.querySelectorAll('.faq-item');
     const backToTopBtn = document.getElementById('back-to-top');
-    const bookingForm = document.getElementById('charter-booking-form');
     const yearSpan = document.getElementById('current-year');
-    const dateInputs = document.querySelectorAll('input[type="date"]');
     
     // Initialize responsive navigation
     const nav = responsiveNav(".nav-collapse", {
@@ -99,51 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Validation & Submission
-    if (bookingForm) {
-        // Set minimum date to today
-        const today = new Date();
-        const minDate = today.toISOString().split('T')[0];
-        
-        dateInputs.forEach(input => {
-            input.min = minDate;
-        });
-
-        bookingForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-            const requiredFields = bookingForm.querySelectorAll('[required]');
-            
-            // Validate required fields
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = 'red';
-                } else {
-                    field.style.borderColor = '';
-                }
-            });
-
-            // Check honeypot (spam protection)
-            const honeypot = bookingForm.querySelector('.honeypot input');
-            if (honeypot && honeypot.value !== '') {
-                isValid = false;
-                console.log("Spam detected!");
-            }
-
-            if (isValid) {
-                // In production, replace with actual form submission
-                console.log('Form data submitted (simulation):', new FormData(bookingForm));
-                alert('(Simulation): Thank you for your booking request! We will contact you shortly via phone or email to confirm availability and arrange the deposit.');
-                
-                // Reset form
-                bookingForm.reset();
-                requiredFields.forEach(field => field.style.borderColor = '');
-            } else {
-                alert('Please fill in all required fields.');
-            }
-        });
-    }
+    // No form handling needed anymore
 
     // Set Current Year in Footer
     if (yearSpan) {
