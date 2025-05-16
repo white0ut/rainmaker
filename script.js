@@ -104,17 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Lightbox initialization - if you're using a lightbox library
-    // Uncomment if you add Lightbox2 or similar
-    /*
+    // Lightbox initialization
     if (typeof lightbox !== 'undefined') {
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true,
-            'albumLabel': "Image %1 of %2"
+            'albumLabel': "Image %1 of %2",
+            'fadeDuration': 300,
+            'positionFromTop': 80,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': true
         });
     }
-    */
     
     // Ensure responsive nav is properly initialized
     window.addEventListener('resize', () => {
